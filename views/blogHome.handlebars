@@ -1,0 +1,21 @@
+<style>
+    .card:hover {
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Add your desired highlighting effect */
+    }
+</style>
+
+<div class="container mt-5">
+    <div class="row">
+        {{#each blogs}}
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <a href="/blogpost/{{this.slug}}" class="text-decoration-none text-dark">
+                            <h5 class="card-title">{{this.title}}</h5>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        {{/each}}
+    </div>
+</div>
